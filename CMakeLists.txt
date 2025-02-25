@@ -3,4 +3,5 @@ project(os_lab_1)
 
 set(CMAKE_CXX_STANDARD 98)
 
-add_executable(os_lab_1 main.cpp)
+add_executable(os_lab_1 main.cpp
+        employee.h)
