@@ -1,0 +1,3 @@
+C:/Users/Termi/CLionProjects/os_lab_1/cmake-build-debug/CMakeFiles/os_lab_1.dir
+C:/Users/Termi/CLionProjects/os_lab_1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Termi/CLionProjects/os_lab_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
