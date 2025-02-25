@@ -61,6 +61,12 @@ build CMakeFiles/os_lab_1.dir/creator.cpp.obj: CXX_COMPILER__os_lab_1_unscanned_
   OBJECT_DIR = CMakeFiles\os_lab_1.dir
   OBJECT_FILE_DIR = CMakeFiles\os_lab_1.dir
 
+build CMakeFiles/os_lab_1.dir/reporter.cpp.obj: CXX_COMPILER__os_lab_1_unscanned_Debug C$:/Users/Termi/CLionProjects/os_lab_1/reporter.cpp || cmake_object_order_depends_target_os_lab_1
+  DEP_FILE = CMakeFiles\os_lab_1.dir\reporter.cpp.obj.d
+  FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\os_lab_1.dir
+  OBJECT_FILE_DIR = CMakeFiles\os_lab_1.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target os_lab_1
@@ -69,7 +75,7 @@ build CMakeFiles/os_lab_1.dir/creator.cpp.obj: CXX_COMPILER__os_lab_1_unscanned_
 #############################################
 # Link the executable os_lab_1.exe
 
-build os_lab_1.exe: CXX_EXECUTABLE_LINKER__os_lab_1_Debug CMakeFiles/os_lab_1.dir/main.cpp.obj CMakeFiles/os_lab_1.dir/creator.cpp.obj
+build os_lab_1.exe: CXX_EXECUTABLE_LINKER__os_lab_1_Debug CMakeFiles/os_lab_1.dir/main.cpp.obj CMakeFiles/os_lab_1.dir/creator.cpp.obj CMakeFiles/os_lab_1.dir/reporter.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\os_lab_1.dir

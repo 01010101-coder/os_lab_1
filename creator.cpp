@@ -10,7 +10,7 @@ void createBinaryFile(const char* filename, int recordCount) {
     ofstream outFile(filename, ios::binary);
 
     for (int i = 0; i < recordCount; ++i) {
-        employee emp;
+        employee emp = {};
 
         cout << "Enter employee identification number: ";
         while (!(cin >> emp.num)) {
