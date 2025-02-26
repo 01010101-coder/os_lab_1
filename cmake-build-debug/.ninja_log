@@ -1,3 +1,7 @@
 # ninja log v6
 23	3815	7621973077751089	CMakeFiles/os_lab_1.dir/main.cpp.obj	1f3093c21fbb61d
 3819	4328	7621973115713580	os_lab_1.exe	3b5d5014d9338cfb
+128	1252	7623009586888314	CMakeFiles/os_lab_1.dir/reporter.cpp.obj	da388ba145adac68
+93	1254	7623009586554469	CMakeFiles/os_lab_1.dir/main.cpp.obj	1f3093c21fbb61d
+118	1258	7623009586788588	CMakeFiles/os_lab_1.dir/creator.cpp.obj	4ed7543119269161
+1258	2234	7623009598195230	os_lab_1.exe	541d8d6318cb21d8
