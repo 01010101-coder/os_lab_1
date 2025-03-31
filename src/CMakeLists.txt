@@ -1,4 +1,4 @@
-add_executable(Main Main.cpp)
+add_executable(Main main.cpp)
 add_executable(Creator Creator.cpp)
 add_executable(Reporter Reporter.cpp)
 

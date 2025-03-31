@@ -23,7 +23,10 @@ bool readBinaryFile(const std::string &fileName, double hourlyRate, std::vector<
 
     employee emp;
     while (ifs.read(reinterpret_cast<char*>(&emp), sizeof(emp))) {
-        reports.push_back(EmployeeReport{ emp, emp.hours * hourlyRate });
+        EmployeeReport er;
+        er.emp = emp;
+        er.salary = emp.hours * hourlyRate;
+        reports.push_back(er);
     }
 
     ifs.close();
@@ -32,9 +35,13 @@ bool readBinaryFile(const std::string &fileName, double hourlyRate, std::vector<
 
 // Сортировка сотрудников по номеру
 void sortReports(std::vector<EmployeeReport> &reports) {
-    std::sort(reports.begin(), reports.end(), [](const EmployeeReport& a, const EmployeeReport& b) {
-        return a.emp.num < b.emp.num;
-    });
+    struct CompareByNum {
+        bool operator()(const EmployeeReport& a, const EmployeeReport& b) const {
+            return a.emp.num < b.emp.num;
+        }
+    };
+    std::sort(reports.begin(), reports.end(), CompareByNum());
+
 }
 
 // Запись отчета в текстовый файл
@@ -48,11 +55,13 @@ bool writeReportFile(const std::string &reportFileName, const std::string &sourc
     ofs << "Report for file \"" << sourceFileName << "\"\n";
     ofs << "Num\tName\tHours\tSalary\n";
 
-    for (const auto& er : reports) {
+    for (std::vector<EmployeeReport>::const_iterator it = reports.begin(); it != reports.end(); ++it) {
+        const EmployeeReport& er = *it;
         ofs << er.emp.num << "\t" << er.emp.name << "\t"
             << er.emp.hours << "\t" << std::fixed << std::setprecision(2)
             << er.salary << "\n";
     }
+
 
     ofs.close();
     return true;

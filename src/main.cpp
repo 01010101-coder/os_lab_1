@@ -44,7 +44,7 @@ int main() {
     std::cin >> recordCount;
 
     // Формируем и запускаем команду Creator
-    std::string creatorCmd = "./Creator " + binFileName + " " + std::to_string(recordCount);
+    std::string creatorCmd = "./src/Creator " + binFileName + " " + std::to_string(recordCount);
     int creatorStatus = std::system(creatorCmd.c_str());
     if (creatorStatus != 0) {
         std::cerr << "Creator process failed." << std::endl;
@@ -63,7 +63,7 @@ int main() {
     std::cin >> hourlyRate;
 
     // Формируем и запускаем команду Reporter
-    std::string reporterCmd = "./Reporter " + binFileName + " " + reportFileName + " " + std::to_string(hourlyRate);
+    std::string reporterCmd = "./src/Reporter " + binFileName + " " + reportFileName + " " + std::to_string(hourlyRate);
     int reporterStatus = std::system(reporterCmd.c_str());
     if (reporterStatus != 0) {
         std::cerr << "Reporter process failed." << std::endl;
