@@ -3,4 +3,6 @@ project(os_lab_1)
 
 set(CMAKE_CXX_STANDARD 98)
 
-add_executable(os_lab_1 main.cpp)
+include_directories("../include")
+
+add_executable(os_lab_1 src/main.cpp)
